@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #667eea,
+            #764ba2
+        );
+
+    padding: 30px 15px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+.container {
+
+    width: 100%;
+
+    max-width: 850px;
+}
+
+
+/* Header */
+
+header {
+
+    text-align: center;
+
+    color: white;
+
+    margin-bottom: 25px;
+}
+
+
+.logo {
+
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+
+header h1 {
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+}
+
+
+header p {
+
+    font-size: 17px;
+
+    opacity: 0.9;
+}
+
+
+/* Main card */
+
+.card {
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+/* Upload */
+
+.upload-box {
+
+    min-height: 190px;
+
+    border:
+        3px dashed
+        #667eea;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.upload-box:hover {
+
+    background: #f5f6ff;
+
+    transform: translateY(-2px);
+}
+
+
+.upload-icon {
+
+    font-size: 50px;
+
+    margin-bottom: 10px;
+}
+
+
+.upload-box h3 {
+
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+
+.upload-box p {
+
+    color: #777;
+}
+
+
+#pdfInput {
+
+    display: none;
+}
+
+
+/* File information */
+
+.file-info {
+
+    margin-top: 25px;
+
+    padding: 18px;
+
+    background: #f3f4ff;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.pdf-icon {
+
+    font-size: 40px;
+}
+
+
+.file-info strong {
+
+    font-size: 17px;
+
+    color: #333;
+}
+
+
+.file-info p {
+
+    margin-top: 5px;
+
+    color: #777;
+}
+
+
+/* Sections */
+
+#textSection,
+#questionSection {
+
+    margin-top: 25px;
+}
+
+
+h2 {
+
+    color: #333;
+
+    margin-bottom: 12px;
+
+    font-size: 21px;
+}
+
+
+/* Text preview */
+
+.text-preview {
+
+    background: #f7f7f7;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    max-height: 220px;
+
+    overflow-y: auto;
+
+    white-space: pre-wrap;
+
+    line-height: 1.6;
+
+    color: #444;
+
+    font-size: 14px;
+}
+
+
+/* Question */
+
+textarea {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 10px;
+
+    resize: vertical;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+
+textarea:focus {
+
+    border-color: #667eea;
+}
+
+
+/* Button */
+
+button {
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #667eea;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+
+    background: #5568d9;
+
+    transform: translateY(-2px);
+}
+
+
+/* Loading */
+
+#loading {
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+
+.spinner {
+
+    width: 45px;
+
+    height: 45px;
+
+    border: 5px solid #ddd;
+
+    border-top-color: #667eea;
+
+    border-radius: 50%;
+
+    animation:
+        spin 1s linear infinite;
+
+    margin: auto;
+}
+
+
+#loading p {
+
+    margin-top: 15px;
+
+    color: #555;
+}
+
+
+@keyframes spin {
+
+    to {
+
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Answer */
+
+.answer {
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    background: #f0f8ff;
+
+    border-left:
+        5px solid
+        #667eea;
+
+    border-radius: 10px;
+}
+
+
+.answer h2 {
+
+    margin-bottom: 10px;
+}
+
+
+.answer p {
+
+    color: #444;
+
+    line-height: 1.7;
+
+    font-size: 17px;
+}
+
+
+/* Error */
+
+.error {
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background: #ffe5e5;
+
+    color: #b00020;
+}
+
+
+/* Footer */
+
+footer {
+
+    text-align: center;
+
+    color: white;
+
+    margin-top: 20px;
+
+    font-size: 14px;
+}
+
+
+/* Hidden */
+
+.hidden {
+
+    display: none !important;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    header h1 {
+
+        font-size: 28px;
+    }
+
+    .card {
+
+        padding: 20px;
+    }
+
+    .upload-box {
+
+        min-height: 160px;
+    }
+
+}

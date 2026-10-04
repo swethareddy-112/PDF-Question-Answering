@@ -1,0 +1,160 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PDF Question Answering AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="logo">📄</div>
+
+            <h1>PDF Question Answering</h1>
+
+            <p>
+                Upload a PDF and ask questions about its content
+            </p>
+        </header>
+
+
+        <div class="card">
+
+            <!-- PDF Upload -->
+
+            <label for="pdfInput" class="upload-box">
+
+                <div class="upload-icon">
+                    📁
+                </div>
+
+                <h3>
+                    Upload PDF
+                </h3>
+
+                <p>
+                    Click here to select a PDF file
+                </p>
+
+            </label>
+
+            <input
+                type="file"
+                id="pdfInput"
+                accept=".pdf,application/pdf"
+            >
+
+
+            <!-- File Information -->
+
+            <div id="fileInfo" class="file-info hidden">
+
+                <span class="pdf-icon">📕</span>
+
+                <div>
+                    <strong id="fileName">
+                        PDF File
+                    </strong>
+
+                    <p id="pageInfo">
+                        Reading PDF...
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- PDF Text Preview -->
+
+            <div id="textSection" class="hidden">
+
+                <h2>📖 Extracted Text</h2>
+
+                <div id="textPreview" class="text-preview">
+                </div>
+
+            </div>
+
+
+            <!-- Question -->
+
+            <div id="questionSection" class="hidden">
+
+                <h2>🤖 Ask a Question</h2>
+
+                <textarea
+                    id="question"
+                    placeholder="Example: What is this document about?"
+                    rows="4"
+                ></textarea>
+
+                <button id="askBtn">
+                    🔍 Find Answer
+                </button>
+
+            </div>
+
+
+            <!-- Loading -->
+
+            <div id="loading" class="hidden">
+
+                <div class="spinner"></div>
+
+                <p id="loadingText">
+                    Processing...
+                </p>
+
+            </div>
+
+
+            <!-- Answer -->
+
+            <div id="answerBox" class="answer hidden">
+
+                <h2>
+                    💡 Answer
+                </h2>
+
+                <p id="answer">
+                </p>
+
+            </div>
+
+
+            <!-- Error -->
+
+            <div id="errorBox" class="error hidden">
+            </div>
+
+        </div>
+
+
+        <footer>
+            PDF Question Answering AI
+        </footer>
+
+    </div>
+
+
+    <!-- PDF.js -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js">
+    </script>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
